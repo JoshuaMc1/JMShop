@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --primary-color: #9B5DE5;
+    --secondary-color: #765DE5;
+    --gray: #EFEFEF;
+    --pink-lavender: #cdb4dbff;
+    --orchid-pink: #ffc8ddff;
+    --nadeshiko-pink: #ffafccff;
+    --uranian-blue: #bde0feff;
+    --baby-blue-eyes: #a2d2ffff;
+    --maximum-yellow-red: #f6bd60ff;
+    --linen: #f7ede2ff;
+    --baby-pink: #f5cac3ff;
+    --morning-blue: #84a59dff;
+    --light-coral: #f28482ff;
+    --light-pink: #ffadadff;
+    --deep-champagne: #ffd6a5ff;
+    --lemon-yellow-crayola: #fdffb6ff;
+    --tea-green: #caffbfff;
+    --electric-blue: #9bf6ffff;
+    --maximum-blue-purple: #bdb2ffff;
+    --mauve: #ffc6ffff;
+    --baby-powder: #fffffcff;
+    --charcoal: #264653ff;
+    --persian-green: #2a9d8fff;
+    --maize-crayola: #e9c46aff;
+    --sandy-brown: #f4a261ff;
+    --burnt-sienna: #e76f51ff;
+    --facebook: #3b5998;
+    --instagram: #ac2bac;
+    --twitter: #55acee;
+    --paypal: #003087;
+    --paypal-light: #009cde;
+    --visa: #1A1F71;
+    --visa-gold: #F7B600;
+    --mastercard: #EB001B;
+    --mastercard-orange: #FF5F00;
+
+    --font: 'Roboto', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--gray);
+    font-family: var(--font);
+}
+
+.ribbon {
+    background: #CB0000 !important;
+    font-size: 13pt;
+    color: white;
+    text-align: center;
+    height: 1.5rem !important;
+    width: 6rem !important;
+    font-family: 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+}
+
+.bg-baby-blue-eyes {
+    background-color: var(--baby-blue-eyes) !important;
+}
+
+.bg-maximum-yellow-red {
+    background-color: var(--maximum-yellow-red) !important;
+}
+
+.bg-linen {
+    background-color: var(--linen) !important;
+}
+
+.bg-baby-pink {
+    background-color: var(--baby-pink) !important;
+}
+
+.bg-morning-blue {
+    background-color: var(--morning-blue) !important;
+}
+
+.bg-light-coral {
+    background-color: var(--light-coral) !important;
+}
+
+.bg-light-pink {
+    background-color: var(--light-pink) !important;
+}
+
+.bg-deep-champagne {
+    background-color: var(--deep-champagne) !important;
+}
+
+.bg-lemon-yellow-crayola {
+    background-color: var(--lemon-yellow-crayola) !important;
+}
+
+.bg-tea-green {
+    background-color: var(--tea-green) !important;
+}
+
+.bg-electric-blue {
+    background-color: var(--electric-blue) !important;
+}
+
+.bg-maximum-blue-purple {
+    background-color: var(--maximum-blue-purple) !important;
+}
+
+.bg-mauve {
+    background-color: var(--mauve) !important;
+}
+
+.bg-baby-powder {
+    background-color: var(--baby-powder) !important;
+}
+
+.bg-charcoal {
+    background-color: var(--charcoal) !important;
+}
+
+.bg-persian-green {
+    background-color: var(--persian-green) !important;
+}
+
+.bg-maize-crayola {
+    background-color: var(--maize-crayola) !important;
+}
+
+.bg-sandy-brown {
+    background-color: var(--sandy-brown) !important;
+}
+
+.bg-burnt-sienna {
+    background-color: var(--burnt-sienna) !important;
+}
+
+.bg-main {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-uranian-blue {
+    background-color: var(--uranian-blue) !important;
+}
+
+.bg-pink-lavender {
+    background-color: var(--pink-lavender) !important;
+}
+
+.bg-orchid-pink {
+    background-color: var(--orchid-pink) !important;
+}
+
+.bg-nadeshiko-pink {
+    background-color: var(--nadeshiko-pink) !important;
+}
+
+.fs-big {
+    font-size: 45px !important;
+}
+
+.btn-main {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    transition: .3s all !important;
+}
+
+.btn-main:hover {
+    background-color: var(--secondary-color) !important;
+    color: white !important;
+}
+
+.btn-categories {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    transition: .3s all !important;
+}
+
+.btn-categories:hover {
+    background-color: white !important;
+    color: var(--primary-color) !important;
+}
+
+.btn-white {
+    background-color: white;
+    color: black;
+    transition: .3s all !important;
+}
+
+.btn-white:hover {
+    background-color: var(--secondary-color);
+    color: white !important;
+}
+
+.btn-outline-facebook {
+    border-color: var(--facebook) !important;
+    color: var(--facebook);
+    background-color: white !important;
+    transition: .3s all !important;
+}
+
+.btn-outline-facebook:hover {
+    background-color: var(--facebook) !important;
+    color: white !important;
+}
+
+.btn-paypal {
+    background-color: var(--paypal) !important;
+    color: white !important;
+    transition: .3s all !important;
+}
+
+.btn-paypal:hover {
+    background-color: var(--paypal-light) !important;
+}
+
+.btn-visa {
+    background-color: var(--visa) !important;
+    color: white !important;
+    transition: .3s all !important;
+}
+
+.btn-visa:hover {
+    background-color: var(--visa-gold) !important;
+    color: black !important;
+}
+
+.btn-mastercard {
+    background-color: var(--mastercard) !important;
+    color: white !important;
+    transition: .3s all !important;
+}
+
+.btn-mastercard:hover {
+    background-color: var(--mastercard-orange) !important;
+}
+
+.link-footer {
+    color: gray !important;
+    font-size: 22px !important;
+    cursor: pointer;
+    transition: .3s all !important;
+    font-weight: bold !important;
+}
+
+hr {
+    border: 1.5px solid var(--primary-color) !important;
+}
+
+.link-footer:hover {
+    color: var(--primary-color) !important;
+    text-decoration: underline !important;
+}
+
+.btn-outline-instagram {
+    border-color: var(--instagram) !important;
+    color: var(--instagram);
+    background-color: white !important;
+    transition: .3s all !important;
+}
+
+.btn-outline-instagram:hover {
+    background-color: var(--instagram) !important;
+    color: white !important;
+}
+
+.btn-outline-twitter {
+    border-color: var(--twitter) !important;
+    color: var(--twitter);
+    background-color: white !important;
+    transition: .3s all !important;
+}
+
+.btn-outline-twitter:hover {
+    background-color: var(--twitter) !important;
+    color: white !important;
+}
+
+.navbar-brand>img {
+    width: 65px !important;
+    height: auto;
+}
+
+.nav-item:hover>a,
+.nav-item:hover>button {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.img-product {
+    width: 330px !important;
+    height: 330px !important;
+}
+
+.img-category {
+    max-width: 280px !important;
+    height: 260px !important;
+    background-color: var(--gray);
+    border-radius: 50% !important;
+    padding: 1.8rem !important;
+}
+
+.img-promotion {
+    max-width: 15rem !important;
+    height: auto;
+}
+
+.img-carousel {
+    width: 100%;
+    max-height: 38rem !important;
+}
+
+.text-main {
+    color: var(--primary-color);
+}
+
+.fa-4x {
+    font-size: 4em !important;
+}
+
+.carousel-caption {
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 1.8rem 2rem;
+    text-align: left;
+    width: 35rem;
+}
+
+.carousel-caption span {
+    padding: .3rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    background-color: var(--primary-color);
+    border-radius: .2rem !important;
+    font-weight: bold;
+    font-size: 20px !important;
+    color: white;
+}
+
+.carousel-caption h1 {
+    color: black;
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.carousel-caption h4 {
+    color: #454545;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.carousel-caption a {
+    font-size: 20px;
+}
+
+.mw-50 {
+    width: 50rem !important;
+}
+
+@media only screen and (max-width : 900px) {
+    .mw-50 {
+        width: 12rem !important;
+    }
+
+    .img-product {
+        width: 130px !important;
+        height: 130px !important;
+    }
+
+    .img-category {
+        width: 150px !important;
+        height: 150px !important;
+        background-color: var(--gray);
+        padding: .8rem !important;
+        border-radius: 50% !important;
+    }
+
+    .fa-4x {
+        font-size: 2.5em !important;
+    }
+
+    .fs-big {
+        font-size: 26px !important;
+    }
+
+    .img-promotion {
+        max-width: 10rem !important;
+        height: auto;
+    }
+
+    .carousel-caption {
+        height: 100%;
+        left: 0;
+        top: 0;
+        padding: 1rem 1rem;
+        text-align: left;
+        width: 24.80rem;
+    }
+
+    .carousel-caption span {
+        padding: .2rem;
+        background-color: var(--primary-color);
+        border-radius: .2rem !important;
+        font-weight: bold;
+        font-size: 14px !important;
+        color: white;
+    }
+
+    .carousel-caption h1 {
+        margin-top: .5rem !important;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        overflow-wrap: break-word;
+    }
+
+    .carousel-caption h4 {
+        display: none;
+    }
+
+    .carousel-caption a {
+        font-size: 12px;
+    }
+
+    #search-main {
+        display: none;
+    }
+
+    #cart-shopping-main {
+        display: none;
+    }
+
+    #promotionContainer {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    #carouselOffer>.carousel-inner .carousel-item>div {
+        display: none;
+    }
+
+    #carouselOffer>.carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+
+    #carouselOffer>.carousel-inner .carousel-item-end.active,
+    #carouselOffer>.carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+
+    #carouselOffer>.carousel-inner .carousel-item-start.active,
+    #carouselOffer>.carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+
+    #carouselOffer>.carousel-inner .carousel-item.active,
+    #carouselOffer>.carousel-inner .carousel-item-next,
+    #carouselOffer>.carousel-inner .carousel-item-prev {
+        display: flex;
+    }
+
+    #carouselOffer>.carousel-inner .carousel-item-end,
+    #carouselOffer>.carousel-inner .carousel-item-start {
+        transform: translateX(0);
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        filter: invert(100%);
+    }
+}

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6cf319f10f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>JMShop</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white px-lg-4 px-md-2 px-2">
+            <a class="navbar-brand fw-bold fs-4" href="./index.html">
+                <img src="./img/logo.png" alt="Logo de la empresa">
+                JMShop
+            </a>
+            <div class="row">
+                <div class="col" id="search-main">
+                    <form action="javascript:void(0)" class="d-flex">
+                        <input class="form-control rounded-end-0" type="search" placeholder="Buscar"
+                            aria-label="Search">
+                        <button class="btn btn-main rounded-start-0" type="submit">
+                            <i class="fa-solid fa-magnifying-glass text-white"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="col align-content-center d-none nav-item" id="card-shopping-mobile">
+                    <button type="button" class="btn nav-link position-relative" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasCarts" aria-controls="offcanvasRight">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                            <span class="visually-hidden">No hay productos.</span>
+                        </span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarts"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito de compra</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
+                aria-controls="navbarOffcanvasLg">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg"
+                aria-labelledby="navbarOffcanvasLgLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">JMShop</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 gap-1">
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold rounded px-2" href="#">Iniciar sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold rounded px-2" href="#">Registrarse</a>
+                        </li>
+                        <li class="nav-item" id="cart-shopping-main">
+                            <button type="button" class="btn nav-link position-relative" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasCart" aria-controls="offcanvasRight">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    0
+                                    <span class="visually-hidden">No hay productos.</span>
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasRightLabelMain">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabelMain">Carrito de compra</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+
+            </div>
+        </div>
+        <div class="container-fluid my-2 d-none" id="search-mobile">
+            <form class="d-flex">
+                <input class="form-control rounded-end-0" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-main rounded-start-0" type="submit">
+                    <i class="fa-solid fa-magnifying-glass text-white"></i>
+                </button>
+            </form>
+        </div>
+        <nav class="px-lg-4 px-md-2 px-2 py-1 bg-main" id="categories">
+            <button class="btn btn-categories fw-bold d-inline">
+                Todos los productos
+            </button>
+            <button class="btn btn-categories fw-bold d-inline">
+                Computadoras
+            </button>
+            <button class="btn btn-categories fw-bold d-inline">
+                Tabletas
+            </button>
+            <button class="btn btn-categories fw-bold d-inline">
+                Celulares
+            </button>
+        </nav>
+    </header>
+    <main>
+        <div id="mainCarousel" class="carousel slide mb-lg-3 mb-1" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/1.png" class="img-carousel" alt="Banner 1">
+                    <div class="carousel-caption">
+                        <span>Los Mejores Precios</span>
+                        <h1>Súper precios en tus artículos favoritos</h1>
+                        <h4>Gana más por tu dinero</h4>
+                        <a class="btn btn-main fw-bold rounded-5" role="button" href="javascript:void(0)">Comprar
+                            ahora</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/2.png" class="img-carousel" alt="Banner 2">
+                    <div class="carousel-caption">
+                        <span>Los Mejores Precios</span>
+                        <h1>Súper precios en tus artículos favoritos</h1>
+                        <h4>Gana más por tu dinero</h4>
+                        <a class="btn btn-main fw-bold rounded-5" role="button" href="javascript:void(0)">Comprar
+                            ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid px-lg-5 px-4 py-2 py-lg-3">
+            <div class="row">
+                <div class="col-12 col-xl-6 px-lg-4 px-2 py-lg-0 py-2">
+                    <div class="row bg-pink-lavender rounded shadow">
+                        <div class="col-6 py-xl-5 py-2">
+                            <span class="fw-bold text-white fs-3">Recién llegados</span>
+                            <h1 class="fw-bold text-white my-lg-4 my-2 fs-big">Lleva tu sonido
+                                donde tu quieras</h1>
+                            <p class="text-white fs-4 my-lg-4 my-2">Mejores marcas de audífonos</p>
+                            <a class="btn btn-white text-black fw-bold rounded-5 px-4" role="button"
+                                href="javascript:void(0)">Comprar ahora</a>
+                        </div>
+                        <div class="col-6 align-content-center align-items-center text-center">
+                            <img src="./img/product-1.png" class="img-promotion" alt="Producto 1">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-6 px-lg-4 px-2 py-lg-0 py-2">
+                    <div class="row bg-orchid-pink rounded shadow">
+                        <div class="col-6 py-xl-5 py-2">
+                            <span class="fw-bold text-white fs-3">Ofertas de temporada</span>
+                            <h1 class="fw-bold text-white my-lg-4 my-2 fs-big">Hasta un 30% menos</h1>
+                            <p class="text-white fs-4 my-lg-4 my-2">En Smartphones seleccionados</p>
+                            <a class="btn btn-white text-black fw-bold rounded-5 px-4" role="button"
+                                href="javascript:void(0)">Ver
+                                Productos</a>
+                        </div>
+                        <div class="col-6 align-content-center align-items-center text-center">
+                            <img src="./img/product-2.png" class="img-promotion" alt="Producto 1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="px-lg-5 px-2 py-lg-3 py-2 d-print-none" id="promotionContainer">
+            <div class="card shadow border-0">
+                <div class="card-body px-lg-5 py-lg-3 px-2 py-2">
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-12">
+                            <div class="row">
+                                <div class="col-2 align-content-center align-items-center d-flex">
+                                    <i class="fas fa-truck-moving text-main fa-4x"></i>
+                                </div>
+                                <div class="col-10 text-start align-content-center align-items-center d-flex">
+                                    <span class="fw-bold fs-4">Envió hasta la puerta de tu casa</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <div class="row">
+                                <div class="col-2 align-content-center align-items-center d-flex">
+                                    <i class="fas fa-box text-main fa-4x"></i>
+                                </div>
+                                <div class="col-10 text-start align-content-center align-items-center d-flex">
+                                    <span class="fw-bold fs-4">Envío gratis en compras superiores a L.
+                                        7,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <div class="row">
+                                <div class="col-2 align-content-center align-items-center d-flex">
+                                    <i class="fas fa-clock text-main fa-4x"></i>
+                                </div>
+                                <div class="col-10 text-start align-content-center align-items-center d-flex">
+                                    <span class="fw-bold fs-4">Disponible 24/7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="px-lg-5 px-2 py-lg-3 py-2">
+            <div class="card shadow border-0">
+                <div class="card-body p-lg-4">
+                    <h1 class="fw-bold text-center">Más vendidos</h1>
+                    <div class="row row-cols-xl-5 row-cols-lg-4 row-cols-2 mb-4">
+                        <div class="col px-0">
+                            <a class="text-decoration-none" href="javascript:void(0)">
+                                <div class="card rounded-0 h-100">
+                                    <span class="ribbon">
+                                        OFERTA
+                                    </span>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-12 text-center">
+                                                <img src="./img/laptop.png" class="img-product" alt="Producto 1">
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <h5 class="fw-bold text-secondary text-start">JP Laptop para juegos
+                                                    de
+                                                    15,6" de
+                                                    256GB
+                                                </h5>
+                                                <span class="fw-bold fs-5 text-main">L. 14, 999.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col px-0">
+                            <a class="text-decoration-none" href="javascript:void(0)">
+                                <div class="card rounded-0 h-100">
+                                    <span class="ribbon">
+                                        OFERTA
+                                    </span>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-12 text-center">
+                                                <img src="./img/moni.png" class="img-product" alt="Producto 1">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <h5 class="fw-bold text-secondary text-start">
+                                                Monitor Curvo Gamer TUF Gaming VG24VQ
+                                            </h5>
+                                            <span class="fw-bold fs-5 text-main">L. 10, 599.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col px-0">
+                            <a class="text-decoration-none" href="javascript:void(0)">
+                                <div class="card rounded-0 h-100">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-12 text-center">
+                                                <img src="./img/sang.jpg" class="img-product" alt="Producto 1">
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <h5 class="fw-bold text-secondary text-start">
+                                                    Samsung Galaxy S22 Ultra de 512GB
+                                                </h5>
+                                                <span class="fw-bold fs-5 text-main">L. 29, 999.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col px-0">
+                            <a class="text-decoration-none" href="javascript:void(0)">
+                                <div class="card rounded-0 h-100">
+                                    <span class="ribbon">
+                                        OFERTA
+                                    </span>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-12 text-center">
+                                                <img src="./img/tab.png" class="img-product" alt="Producto 1">
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <h5 class="fw-bold text-secondary text-start">
+                                                    Tablet Xiaomi Pad 5 Pro
+                                                </h5>
+                                                <span class="fw-bold fs-5 text-main">L. 13, 500.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col px-0">
+                            <a class="text-decoration-none" href="javascript:void(0)">
+                                <div class="card rounded-0 h-100">
+                                    <span class="ribbon">
+                                        OFERTA
+                                    </span>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-12 text-center">
+                                                <img src="./img/iph.png" class="img-product" alt="Producto 1">
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <h5 class="fw-bold text-secondary text-start">
+                                                    iPhone 13 Pro Max de 256GB
+                                                </h5>
+                                                <span class="fw-bold fs-5 text-main">L. 34, 599.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container-fluid text-center">
+                        <a class="btn btn-main btn-lg rounded-5 px-5 py-2" role="button" href="javascript:void(0)">Ver
+                            todo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="px-lg-5 px-2 py-lg-3 py-2">
+            <div class="card shadow border-0">
+                <div class="card-body">
+                    <h1 class="fw-bold text-center">Comprar por categoría</h1>
+                    <div class="row row-cols-xl-6 row-cols-lg-4 row-cols-2 mb-4 py-xl-3 py-1">
+                        <div class="col">
+                            <div class="img-category mb-2">
+                                <img src="./img/iph.png" class="img-fluid" alt="Categoría 1">
+                            </div>
+                            <div class="container-fluid text-center">
+                                <h3 class="fw-bold">Teléfonos</h3>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="img-category mb-2">
+                                <img src="./img/tab.png" class="img-fluid" alt="Categoría 1">
+                            </div>
+                            <div class="container-fluid text-center">
+                                <h3 class="fw-bold">Tabletas</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="px-lg-5 px-2 py-lg-3 py-2">
+            <div class="card shadow border-0">
+                <div class="card-body px-lg-5">
+                    <h1 class="fw-bold mb-3 text-center">Ofertas</h1>
+                    <div class="container-fluid text-center my-3 py-xl-3 py-1">
+                        <div class="row">
+                            <div class="row mx-auto my-auto justify-content-center">
+                                <div id="carouselOffer" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="carousel-item active">
+                                            <div class="col-md-3">
+                                                <a class="text-decoration-none" href="javascript:void(0)">
+                                                    <div class="card rounded-0 h-100">
+                                                        <span class="ribbon">
+                                                            OFERTA
+                                                        </span>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-lg-12 text-center">
+                                                                    <img src="./img/iph.png" class="img-product"
+                                                                        alt="Producto 1">
+                                                                </div>
+                                                                <div class="col-lg-12">
+                                                                    <h5 class="fw-bold text-secondary text-start">
+                                                                        iPhone 13 Pro Max de 256GB
+                                                                    </h5>
+                                                                    <span class="fw-bold fs-5 text-main">L. 34,
+                                                                        599.00</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="col-md-3">
+                                                <a class="text-decoration-none" href="javascript:void(0)">
+                                                    <div class="card rounded-0 h-100">
+                                                        <span class="ribbon">
+                                                            OFERTA
+                                                        </span>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-lg-12 text-center">
+                                                                    <img src="./img/laptop.png" class="img-product"
+                                                                        alt="Producto 1">
+                                                                </div>
+                                                                <div class="col-lg-12">
+                                                                    <h5 class="fw-bold text-secondary text-start">
+                                                                        iPhone 13 Pro Max de 256GB
+                                                                    </h5>
+                                                                    <span class="fw-bold fs-5 text-main">L. 34,
+                                                                        599.00</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="col-md-3">
+                                                <a class="text-decoration-none" href="javascript:void(0)">
+                                                    <div class="card rounded-0 h-100">
+                                                        <span class="ribbon">
+                                                            OFERTA
+                                                        </span>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-lg-12 text-center">
+                                                                    <img src="./img/sang.jpg" class="img-product"
+                                                                        alt="Producto 1">
+                                                                </div>
+                                                                <div class="col-lg-12">
+                                                                    <h5 class="fw-bold text-secondary text-start">
+                                                                        iPhone 13 Pro Max de 256GB
+                                                                    </h5>
+                                                                    <span class="fw-bold fs-5 text-main">L. 34,
+                                                                        599.00</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="col-md-3">
+                                                <a class="text-decoration-none" href="javascript:void(0)">
+                                                    <div class="card rounded-0 h-100">
+                                                        <span class="ribbon">
+                                                            OFERTA
+                                                        </span>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-lg-12 text-center">
+                                                                    <img src="./img/tab.png" class="img-product"
+                                                                        alt="Producto 1">
+                                                                </div>
+                                                                <div class="col-lg-12">
+                                                                    <h5 class="fw-bold text-secondary text-start">
+                                                                        iPhone 13 Pro Max de 256GB
+                                                                    </h5>
+                                                                    <span class="fw-bold fs-5 text-main">L. 34,
+                                                                        599.00</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="col-md-3">
+                                                <a class="text-decoration-none" href="javascript:void(0)">
+                                                    <div class="card rounded-0 h-100">
+                                                        <span class="ribbon">
+                                                            OFERTA
+                                                        </span>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-lg-12 text-center">
+                                                                    <img src="./img/moni.png" class="img-product"
+                                                                        alt="Producto 1">
+                                                                </div>
+                                                                <div class="col-lg-12">
+                                                                    <h5 class="fw-bold text-secondary text-start">
+                                                                        iPhone 13 Pro Max de 256GB
+                                                                    </h5>
+                                                                    <span class="fw-bold fs-5 text-main">L. 34,
+                                                                        599.00</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev bg-transparent w-aut" href="#carouselOffer"
+                                        role="button" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    </a>
+                                    <a class="carousel-control-next bg-transparent w-aut" href="#carouselOffer"
+                                        role="button" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="visible" class="d-none d-md-block"></div>
+                    <div class="container-fluid text-center mb-3">
+                        <a class="btn btn-main btn-lg rounded-5 px-5 py-2" role="button" href="javascript:void(0)">Ver
+                            todas las ofertas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="px-lg-5 px-2 py-lg-3 py-2">
+            <div class="card shadow border-0 bg-main">
+                <div class="card-body p-xl-5 p-lg-4 p-md-3 p-3 text-center text-white">
+                    <h3 class="fw-bold mb-3">Boletín informativo</h3>
+                    <span class="fs-5">Suscríbete y recibe noticias sobre novedades y ofertas especiales</span>
+                    <div class="text-center mt-3">
+                        <form action="javascript:void(0)" class="d-inline-flex">
+                            <input class="form-control form-control-lg mw-50 rounded-end-0" type="email"
+                                placeholder="Correo electrónico">
+                            <button class="btn btn-white rounded-start-0 border" type="submit">
+                                Suscribirse
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-white">
+        <div class="container-fluid px-xl-5 px-3 py-xl-4 py-3">
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <h2 class="fw-bold mb-lg-5 mb-3">Ubicación de la tienda</h2>
+                    <div class="content">
+                        <span class="fw-bold">Dirección</span>
+                        <address class="text-capitalize fs-6">
+                            Ave. 21 de septiembre, calle 31, La Ceiba, Atlántida,
+                            Honduras.
+                        </address>
+                    </div>
+                    <div class="content mb-3">
+                        <span class="fw-bold">Correo electrónico</span>
+                        <address>
+                            <a href="mailto:info@info.com">info@info.com</a>
+                        </address>
+                    </div>
+                    <div class="content mb-3">
+                        <span class="fw-bold">Numero de teléfono</span>
+                        <div class="phone-number">
+                            +(504) 9989-0990
+                        </div>
+                        <div class="phone-number">
+                            +(504) 9989-0988
+                        </div>
+                    </div>
+                    <div class="content">
+                        <span class="fw-bold">Redes sociales</span>
+                        <div class="d-flex gap-3">
+                            <a class="btn btn-outline-facebook my-2" href="#!" role="button">
+                                <i class="fab fa-facebook-f fa-fw"></i>
+                                Facebook
+                            </a>
+                            <a class="btn btn-outline-instagram my-2" href="#!" role="button">
+                                <i class="fab fa-instagram fa-fw"></i>
+                                Instagram
+                            </a>
+                            <a class="btn btn-outline-twitter my-2" href="#!" role="button">
+                                <i class="fab fa-twitter fa-fw"></i>
+                                Twitter
+                            </a>
+                        </div>
+                    </div>
+                    <hr class="d-lg-none">
+                </div>
+                <div class="col-12 col-lg-4">
+                    <h2 class="fw-bold mb-lg-5 mb-3">Atención al cliente</h2>
+                    <div class="content mb-3">
+                        <a class="text-decoration-none link-footer" href="javascript:void(0)">Contáctenos</a>
+                    </div>
+                    <div class="content mb-3">
+                        <a class="text-decoration-none link-footer" href="javascript:void(0)">Asistencia</a>
+                    </div>
+                    <div class="content mb-3">
+                        <a class="text-decoration-none link-footer" href="javascript:void(0)">Acerca de</a>
+                    </div>
+                    <hr class="d-lg-none">
+                </div>
+                <div class="col-12 col-lg-4">
+                    <h2 class="fw-bold mb-lg-5 mb-3">Política</h2>
+                    <div class="content mb-3">
+                        <a href="javascript:void(0)" class="text-decoration-none link-footer">Envío y devoluciones</a>
+                    </div>
+                    <div class="content mb-3">
+                        <a href="javascript:void(0)" class="text-decoration-none link-footer">Términos y condiciones</a>
+                    </div>
+                    <div class="content mb-3">
+                        <a href="javascript:void(0)" class="text-decoration-none link-footer">Métodos de pago</a>
+                    </div>
+                    <div class="content mb-3">
+                        <a href="javascript:void(0)" class="text-decoration-none link-footer">FAQ</a>
+                    </div>
+                    <hr class="d-lg-none">
+                </div>
+                <div class="col-12">
+                    <hr class="d-none d-xl-block">
+                    <h1 class="fw-bold my-4 text-center">Aceptamos los siguientes métodos de pago</h1>
+                    <div class="method text-center py-2 mx-auto gap-3">
+                        <a role="button" class="btn btn-paypal" href="javascript:void(0)">
+                            <i class="fa-brands fa-paypal fa-fw"></i>
+                            PayPal
+                        </a>
+                        <a role="button" class="btn btn-visa" href="javascript:void(0)">
+                            <i class="fa-brands fa-cc-visa fa-fw"></i>
+                            Visa
+                        </a>
+                        <a role="button" class="btn btn-mastercard" href="javascript:void(0)">
+                            <i class="fa fa-cc-mastercard fa-fw"></i>
+                            MasterCard
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-main text-center py-2">
+            <span class="text-white">&copy; 2023 Created by <strong>JMProjects</strong></span>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
