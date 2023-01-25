@@ -365,6 +365,65 @@ hr {
     width: 50rem !important;
 }
 
+#search-main {
+    width: 25rem !important;
+}
+
+.container-result {
+    position: absolute !important;
+    left: 12.5rem !important;
+    top: 3.8rem !important;
+    padding: .5rem !important;
+    width: 23.5rem !important;
+    float: inherit !important;
+    border-radius: .5rem !important;
+    background-color: var(--gray) !important;
+    max-height: 30rem !important;
+    overflow-y: scroll !important;
+    overflow-x: hidden;
+}
+
+.container-result::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+.container-result::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.container-result::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.container-result::-webkit-scrollbar-thumb:active {
+    background-color: var(--secondary-color);
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+.container-result::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+.container-result::-webkit-scrollbar-track:hover,
+.container-result::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
+}
+
+.img-search-result {
+    width: 100px !important;
+    height: auto !important;
+    aspect-ratio: 3/2 !important;
+    object-fit: contain !important;
+}
+
 @media only screen and (max-width : 900px) {
     .mw-50 {
         width: 12rem !important;
@@ -428,6 +487,17 @@ hr {
 
     .carousel-caption a {
         font-size: 12px;
+    }
+
+    .container-result {
+        position: absolute !important;
+        left: .9rem !important;
+        top: 7.5rem !important;
+        padding: .5rem !important;
+        width: 22.5rem !important;
+        float: inherit !important;
+        border-radius: .3rem !important;
+        background-color: white !important;
     }
 
     #search-main {

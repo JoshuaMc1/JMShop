@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/6cf319f10f.js" crossorigin="anonymous"></script>
@@ -22,8 +23,8 @@
             <div class="row">
                 <div class="col" id="search-main">
                     <form action="javascript:void(0)" class="d-flex">
-                        <input class="form-control rounded-end-0" type="search" placeholder="Buscar"
-                            aria-label="Search">
+                        <input class="form-control rounded-end-0" type="search" placeholder="Buscar" aria-label="Search"
+                            id="search">
                         <button class="btn btn-main rounded-start-0" type="submit">
                             <i class="fa-solid fa-magnifying-glass text-white"></i>
                         </button>
@@ -95,7 +96,8 @@
         </div>
         <div class="container-fluid my-2 d-none" id="search-mobile">
             <form class="d-flex">
-                <input class="form-control rounded-end-0" type="search" placeholder="Buscar" aria-label="Search">
+                <input class="form-control rounded-end-0" type="search" placeholder="Buscar" aria-label="Search"
+                    id="searchMobile">
                 <button class="btn btn-main rounded-start-0" type="submit">
                     <i class="fa-solid fa-magnifying-glass text-white"></i>
                 </button>
@@ -534,6 +536,170 @@
                                 Suscribirse
                             </button>
                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-result shadow-lg d-none" id="resultSearch">
+            <div class="row row-cols-1">
+                <div class="col border-bottom p-1">
+                    <div class="row">
+                        <div class="col-3 d-flex">
+                            <a class="text-main text-decoration-none" href="javascript:void(0)">
+                                <img class="img-search-result" src="./img/tab.png" alt="producto 1">
+                            </a>
+                        </div>
+                        <div class="col-9">
+                            <a class="text-main text-decoration-none" href="javascript:void(0)">
+                                <h5 class="fw-bold">Tablet Xiaomi</h5>
+                            </a>
+                            <div class="content">
+                                <div class="text-black">Categoría:
+                                    <a class="text-decoration-none text-main" href="javascript:void(0)">Tabletas</a>
+                                </div>
+                                <span class="text-main fw-bold">L. 9, 800.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col border-bottom p-1">
+                    <div class="row">
+                        <div class="col-3 d-flex">
+                            <a class="text-main text-decoration-none" href="javascript:void(0)">
+                                <img class="img-search-result" src="./img/tab.png" alt="producto 1">
+                            </a>
+                        </div>
+                        <div class="col-9">
+                            <a class="text-main text-decoration-none" href="javascript:void(0)">
+                                <h5 class="fw-bold">Tablet Xiaomi</h5>
+                            </a>
+                            <div class="content">
+                                <div class="text-black">Categoría:
+                                    <a class="text-decoration-none text-main" href="javascript:void(0)">Tabletas</a>
+                                </div>
+                                <span class="text-main fw-bold">L. 9, 800.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col border-bottom p-1">
+                    <div class="row">
+                        <div class="col-3 d-flex">
+                            <a class="text-main text-decoration-none" href="javascript:void(0)">
+                                <img class="img-search-result" src="./img/tab.png" alt="producto 1">
+                            </a>
+                        </div>
+                        <div class="col-9">
+                            <a class="text-main text-decoration-none" href="javascript:void(0)">
+                                <h5 class="fw-bold">Tablet Xiaomi</h5>
+                            </a>
+                            <div class="content">
+                                <div class="text-black">Categoría:
+                                    <a class="text-decoration-none text-main" href="javascript:void(0)">Tabletas</a>
+                                </div>
+                                <span class="text-main fw-bold">L. 9, 800.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col border-bottom p-1">
+                    <div class="row">
+                        <div class="col-3 d-flex">
+                            <a class="text-main text-decoration-none" href="javascript:void(0)">
+                                <img class="img-search-result" src="./img/tab.png" alt="producto 1">
+                            </a>
+                        </div>
+                        <div class="col-9">
+                            <a class="text-main text-decoration-none" href="javascript:void(0)">
+                                <h5 class="fw-bold">Tablet Xiaomi</h5>
+                            </a>
+                            <div class="content">
+                                <div class="text-black">Categoría:
+                                    <a class="text-decoration-none text-main" href="javascript:void(0)">Tabletas</a>
+                                </div>
+                                <span class="text-main fw-bold">L. 9, 800.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col border-bottom p-1">
+                    <div class="row">
+                        <div class="col-3 d-flex">
+                            <a class="text-main text-decoration-none" href="javascript:void(0)">
+                                <img class="img-search-result" src="./img/tab.png" alt="producto 1">
+                            </a>
+                        </div>
+                        <div class="col-9">
+                            <a class="text-main text-decoration-none" href="javascript:void(0)">
+                                <h5 class="fw-bold">Tablet Xiaomi</h5>
+                            </a>
+                            <div class="content">
+                                <div class="text-black">Categoría:
+                                    <a class="text-decoration-none text-main" href="javascript:void(0)">Tabletas</a>
+                                </div>
+                                <span class="text-main fw-bold">L. 9, 800.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col border-bottom p-1">
+                    <div class="row">
+                        <div class="col-3 d-flex">
+                            <a class="text-main text-decoration-none" href="javascript:void(0)">
+                                <img class="img-search-result" src="./img/tab.png" alt="producto 1">
+                            </a>
+                        </div>
+                        <div class="col-9">
+                            <a class="text-main text-decoration-none" href="javascript:void(0)">
+                                <h5 class="fw-bold">Tablet Xiaomi</h5>
+                            </a>
+                            <div class="content">
+                                <div class="text-black">Categoría:
+                                    <a class="text-decoration-none text-main" href="javascript:void(0)">Tabletas</a>
+                                </div>
+                                <span class="text-main fw-bold">L. 9, 800.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col border-bottom p-1">
+                    <div class="row">
+                        <div class="col-3 d-flex">
+                            <a class="text-main text-decoration-none" href="javascript:void(0)">
+                                <img class="img-search-result" src="./img/tab.png" alt="producto 1">
+                            </a>
+                        </div>
+                        <div class="col-9">
+                            <a class="text-main text-decoration-none" href="javascript:void(0)">
+                                <h5 class="fw-bold">Tablet Xiaomi</h5>
+                            </a>
+                            <div class="content">
+                                <div class="text-black">Categoría:
+                                    <a class="text-decoration-none text-main" href="javascript:void(0)">Tabletas</a>
+                                </div>
+                                <span class="text-main fw-bold">L. 9, 800.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col border-bottom p-1">
+                    <div class="row">
+                        <div class="col-3 d-flex">
+                            <a class="text-main text-decoration-none" href="javascript:void(0)">
+                                <img class="img-search-result" src="./img/tab.png" alt="producto 1">
+                            </a>
+                        </div>
+                        <div class="col-9">
+                            <a class="text-main text-decoration-none" href="javascript:void(0)">
+                                <h5 class="fw-bold">Tablet Xiaomi</h5>
+                            </a>
+                            <div class="content">
+                                <div class="text-black">Categoría:
+                                    <a class="text-decoration-none text-main" href="javascript:void(0)">Tabletas</a>
+                                </div>
+                                <span class="text-main fw-bold">L. 9, 800.00</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
