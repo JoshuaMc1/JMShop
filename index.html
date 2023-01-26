@@ -16,11 +16,13 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-white px-lg-4 px-md-2 px-2">
+            <!-- Logo del menu principal -->
             <a class="navbar-brand fw-bold fs-4" href="./index.html">
                 <img src="./img/logo.png" alt="Logo de la empresa">
                 JMShop
             </a>
             <div class="row">
+                <!-- Buscador principal -->
                 <div class="col" id="search-main">
                     <form action="javascript:void(0)" class="d-flex">
                         <input class="form-control rounded-end-0" type="search" placeholder="Buscar" aria-label="Search"
@@ -30,32 +32,24 @@
                         </button>
                     </form>
                 </div>
+                <!-- Botón carrito de compras móvil -->
                 <div class="col align-content-center d-none nav-item" id="card-shopping-mobile">
                     <button type="button" class="btn nav-link position-relative" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasCarts" aria-controls="offcanvasRight">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            0
+                            2
                             <span class="visually-hidden">No hay productos.</span>
                         </span>
                     </button>
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarts"
-                        aria-labelledby="offcanvasRightLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito de compra</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-
-                        </div>
-                    </div>
                 </div>
             </div>
+            <!-- Botón del menu -->
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
                 aria-controls="navbarOffcanvasLg">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Menu -->
             <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg"
                 aria-labelledby="navbarOffcanvasLgLabel">
                 <div class="offcanvas-header">
@@ -65,18 +59,21 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 gap-1">
                         <li class="nav-item">
-                            <a class="nav-link fw-bold rounded px-2" href="#">Iniciar sesión</a>
+                            <a class="nav-link fw-bold rounded px-2" href="./index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-bold rounded px-2" href="#">Registrarse</a>
+                            <a class="nav-link fw-bold rounded px-2" href="javascript:void(0)">Iniciar sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold rounded px-2" href="javascript:void(0)">Registrarse</a>
                         </li>
                         <li class="nav-item" id="cart-shopping-main">
                             <button type="button" class="btn nav-link position-relative" data-bs-toggle="offcanvas"
-                                data-bs-target="#offcanvasCart" aria-controls="offcanvasRight">
+                                data-bs-target="#offcanvasCarts" aria-controls="offcanvasRight">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 <span
                                     class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                    0
+                                    2
                                     <span class="visually-hidden">No hay productos.</span>
                                 </span>
                             </button>
@@ -85,15 +82,119 @@
                 </div>
             </div>
         </nav>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasRightLabelMain">
+        <!-- Carrito de compras -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarts"
+            aria-labelledby="offcanvasRightLabelMain">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasRightLabelMain">Carrito de compra</h5>
+                <h5 class="offcanvas-title fw-bold" id="offcanvasRightLabelMain">Carrito de compra</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-
+                <div class="container-fluid h-100">
+                    <div class="cart-detail">
+                        <div class="row row-cols-1 mx-1">
+                            <div class="col py-2 border-bottom border-top">
+                                <div class="row m-0">
+                                    <div class="col-10">
+                                        <h6 class="text-secondary fw-bold">Tablet Xiaomi Pad 5 Pro</h6>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-danger btn-sm">
+                                            <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row m-0">
+                                    <div class="col-5 m-0 p-0">
+                                        <img class="img-fluid" src="./img/tab.png" alt="Tablet">
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="row">
+                                            <div class="col-12 mb-2">
+                                                <label class="fw-bold text-secondary" for="cantidad">Cantidad</label>
+                                                <input class="input-number" id="cantidad" type="number" min="1" step="1"
+                                                    value="1">
+                                            </div>
+                                            <div class="col-12 mb-2">
+                                                <h6 class="fw-bold text-secondary">Precio:</h6>
+                                                <span>L. 13, 500.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col py-2 border-bottom">
+                                <div class="row m-0">
+                                    <div class="col-10">
+                                        <h6 class="text-secondary fw-bold">iPhone 13 Pro Max de 256GB</h6>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-danger btn-sm">
+                                            <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row m-0">
+                                    <div class="col-5 m-0 p-0">
+                                        <img class="img-fluid" src="./img/iph.png" alt="Tablet">
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="row">
+                                            <div class="col-12 mb-2">
+                                                <label class="fw-bold text-secondary" for="cantidad">Cantidad</label>
+                                                <input class="input-number" id="cantidad" type="number" min="1" step="1"
+                                                    value="1">
+                                            </div>
+                                            <div class="col-12 mb-2">
+                                                <h6 class="fw-bold text-secondary">Precio:</h6>
+                                                <span>L. 34, 599.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-1">
+                    <div class="cart-total py-3">
+                        <div class="row">
+                            <div class="col-6">
+                                <span class="text-secondary fw-bold">Subtotal:</span>
+                            </div>
+                            <div class="col-6">
+                                <span class="text-secondary">L. 48, 099.00</span>
+                            </div>
+                            <div class="col-6">
+                                <span class="text-secondary fw-bold">Tipo de entrega:</span>
+                            </div>
+                            <div class="col-6">
+                                <span class="text-secondary">En la tienda</span>
+                            </div>
+                            <div class="col-12">
+                                <hr>
+                            </div>
+                            <div class="col-6">
+                                <span class="fw-bold fs-5 text-secondary">Total:</span>
+                            </div>
+                            <div class="col-6">
+                                <span class="text-secondary">L. 48, 099.00</span>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <small class="text-secondary">ISV calculado en el carrito.</small>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-grid">
+                                    <button class="btn btn-main rounded-5">
+                                        Finalizar compra
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- Buscador móvil -->
         <div class="container-fluid my-2 d-none" id="search-mobile">
             <form class="d-flex">
                 <input class="form-control rounded-end-0" type="search" placeholder="Buscar" aria-label="Search"
@@ -103,6 +204,7 @@
                 </button>
             </form>
         </div>
+        <!-- Menu de categorías -->
         <nav class="px-lg-4 px-md-2 px-2 py-1 bg-main" id="categories">
             <button class="btn btn-categories fw-bold d-inline">
                 Todos los productos
@@ -344,20 +446,24 @@
                     <h1 class="fw-bold text-center">Comprar por categoría</h1>
                     <div class="row row-cols-xl-6 row-cols-lg-4 row-cols-2 mb-4 py-xl-3 py-1">
                         <div class="col">
-                            <div class="img-category mb-2">
-                                <img src="./img/iph.png" class="img-fluid" alt="Categoría 1">
-                            </div>
-                            <div class="container-fluid text-center">
-                                <h3 class="fw-bold">Teléfonos</h3>
-                            </div>
+                            <a class="text-decoration-none" href="javascript:void(0)">
+                                <div class="img-category mb-2">
+                                    <img src="./img/iph.png" class="img-fluid" alt="Categoría 1">
+                                </div>
+                                <div class="container-fluid text-center">
+                                    <h3 class="fw-bold text-dark">Teléfonos</h3>
+                                </div>
+                            </a>
                         </div>
                         <div class="col">
-                            <div class="img-category mb-2">
-                                <img src="./img/tab.png" class="img-fluid" alt="Categoría 1">
-                            </div>
-                            <div class="container-fluid text-center">
-                                <h3 class="fw-bold">Tabletas</h3>
-                            </div>
+                            <a class="text-decoration-none" href="javascript:void(0)">
+                                <div class="img-category mb-2">
+                                    <img src="./img/tab.png" class="img-fluid" alt="Categoría 1">
+                                </div>
+                                <div class="container-fluid text-center">
+                                    <h3 class="fw-bold text-dark">Tabletas</h3>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -705,10 +811,10 @@
             </div>
         </div>
     </main>
-    <footer class="bg-white">
+    <footer class="bg-white mt-2 mt-lg-3">
         <div class="container-fluid px-xl-5 px-3 py-xl-4 py-3">
-            <div class="row">
-                <div class="col-12 col-lg-4">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+                <div class="col">
                     <h2 class="fw-bold mb-lg-5 mb-3">Ubicación de la tienda</h2>
                     <div class="content">
                         <span class="fw-bold">Dirección</span>
@@ -751,7 +857,10 @@
                     </div>
                     <hr class="d-lg-none">
                 </div>
-                <div class="col-12 col-lg-4">
+                <div class="col">
+
+                </div>
+                <div class="col">
                     <h2 class="fw-bold mb-lg-5 mb-3">Atención al cliente</h2>
                     <div class="content mb-3">
                         <a class="text-decoration-none link-footer" href="javascript:void(0)">Contáctenos</a>
@@ -764,7 +873,10 @@
                     </div>
                     <hr class="d-lg-none">
                 </div>
-                <div class="col-12 col-lg-4">
+                <div class="col">
+
+                </div>
+                <div class="col">
                     <h2 class="fw-bold mb-lg-5 mb-3">Política</h2>
                     <div class="content mb-3">
                         <a href="javascript:void(0)" class="text-decoration-none link-footer">Envío y devoluciones</a>
@@ -780,6 +892,8 @@
                     </div>
                     <hr class="d-lg-none">
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-12">
                     <hr class="d-none d-xl-block">
                     <h1 class="fw-bold my-4 text-center">Aceptamos los siguientes métodos de pago</h1>
